@@ -1,0 +1,36 @@
+<form novalidate name="form" class="css-form" ng-controller="formController">
+<div class="form-group">
+    <label for="name">First Name</label>
+    <input type="text" class="form-control" name="firstName" ng-model="formData.firstName" required>
+</div>
+
+<div class="form-group">
+    <label for="name">Username</label>
+    <input  ng-minlength="4" ng-maxlength="12" type="text" class="form-control" name="username" ng-model="formData.username" required>
+</div>
+
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" name="email" ng-model="formData.email" required>
+</div>
+
+<div class="form-group">
+    <label for="name">Password</label>
+    <input type="text" class="form-control" name="password" ng-model="formData.password" ng-minlength="6" ng-maxlength="12" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required>
+</div>
+
+<div class="form-group">
+<div class="checkbox">
+  <label><input ng-model="formData.agreeTerms" type="checkbox" required>By checking this box, I agree to <u>Terms & Conditions</u> of the site.</label>
+</div>
+</div>
+
+<div class="form-group row" > 
+<div class="col-xs-6 col-xs-offset-3">
+<button ng-disabled="!form.$valid" type="submit" class="btn btn-block btn-info" onclick="location.href='#/step-two'">
+  Next Step  <span class="glyphicon glyphicon-circle-arrow-right">
+</button>
+</div>
+</div>
+</form>
+
