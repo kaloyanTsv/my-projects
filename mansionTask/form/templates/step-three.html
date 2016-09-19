@@ -1,1 +1,50 @@
-<p>Step3</p>
+<form novalidate name="form" class="css-form" ng-controller="formController">
+<div class="form-group">
+    <label for="name">Address 1</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="name">Address 2</label>
+    <input  type="text" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="email">City</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="name">Country</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="name">Postal Code</label>
+    <input type="text" class="form-control">
+</div>
+<div class="form-group">
+    <label for="name">Phone Number</label>
+    <input type="text" class="form-control">
+</div>
+<a ng-click="showCode = true">Do you have a bonus code? Click here.</a>
+<div class="form-group" ng-show="showCode">
+    <label for="name">Bonus Code</label>
+    <input type="text" class="form-control">
+</div>
+
+<div class="form-group">
+<div class="checkbox">
+  <label><input  type="checkbox"></label>
+</div>
+</div>
+
+<div class="form-group row" > 
+<div class="col-xs-6 col-xs-offset-3">
+<button   class="btn btn-block btn-info" onclick="location.href='#/step-four'">
+  Next Step  <span class="glyphicon glyphicon-circle-arrow-right">
+</button>
+</div>
+</div>
+</form>
+
